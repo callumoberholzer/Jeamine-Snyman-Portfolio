@@ -1,0 +1,361 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*			WRAPPERS			*/
+
+.wrapper{
+	width:100%;
+	margin:0;
+	padding:0;
+	display:inline-block;
+}
+
+.body_wrapper{
+	width:100%;
+	position:relative;
+}
+
+body{
+	margin:0;
+	padding:0;
+	background-color:#262626;
+}
+
+/* 			FONTS 			*/
+@font-face{
+	font-family:'arcon';
+	src:url(fonts/arcon-regular.otf);
+}
+@font-face{
+	font-family:'courier';
+	src:url(fonts/Courier%20New.ttf);
+}
+
+/*BODY COPY MAIN HEADING*/
+h1{	
+	font-family:'courier';
+	font-size:30px;
+	font-weight:500;
+	color:#fd7614;
+	display:inline;
+}
+
+/*NAV HIGHLIGHT AND BODY SUB HEADING*/
+h2{
+	font-family:'arcon';
+	font-size:15px;
+	color:#fd7614;
+	display:inline;
+	font-weight:200;
+}
+
+/* NAV 'CODE' FONT*/
+h3{
+	color:#b3b3b3;
+	font-size:12px;
+	font-family:'arcon';
+	display:inline;
+}
+
+/* BODY 'CODE' FONT*/
+h4{
+	color:#b3b3b3;
+	font-size:12px;
+	font-family:'arcon';
+	margin:10px 40px 4px;
+	display:block;
+}
+
+/*NAV AND BODY COPY FONT*/
+p{
+	color:#262626;
+	font-family:'arcon';
+	font-size:14px;
+	display:inline;
+	margin:0;
+	line-height:20px;
+}
+
+p2{
+	font-family:'arcon';
+	font-size:14px;
+	color:#fd7614;
+	display:inline;
+}
+
+small{
+	font-family:'arcon';
+	color:#262626;
+	margin:4px auto;
+	padding:0;
+}
+
+
+/*			LOGO			*/
+
+.navBar{
+	width:100%;
+	position:fixed;
+	z-index:1;
+}
+
+/*HOME LOGO*/
+.home_logo{
+	width:40%;
+	position:fixed;
+	top:38%;
+	left:0;
+    right:0;
+	margin:0 auto;
+	z-index: -1;
+}
+
+/*SMALL PAGE LOGO*/
+.logo{
+	margin:2% 2% 3%;
+	float:right;
+	width:100%;
+	display:block;
+}
+
+.img{
+	margin:2% auto;
+}
+
+.logo img{
+	float:right;
+}
+
+/*			NAV BAR 			*/
+.dropMenu{
+	margin:0;
+	display:inline-block;
+	float:left;
+	width:50%;
+	z-index:10px;
+}
+
+.stickyBar{
+	height:40px;
+	width:49%;
+	background-color:#262626;
+	z-index:-1;
+	position:fixed;
+	top:0;
+}
+
+.dropMenu ul{
+	display:inline-block;
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	background-color: rgba(237,237,237,0.95); /*opacity here*/
+}
+
+.dropMenu ul a
+{
+	display:block;
+	color:#262626;
+	text-decoration:none;
+	font-size:12px;
+	width:200px;
+	margin-left:20px;
+	font-family:"arcon";
+	transition: color 300ms;
+}
+.dropMenu .symbol {
+	width:180px; /*here's the width for the menu layer 1*/
+}
+
+.dropMenu .symbol-a {
+	position:absolute;
+	z-index: 1;
+	margin:0;
+}
+
+.dropMenu ul li {
+	float:left;
+	padding-left:20px;
+}
+
+.dropMenu ul li a:hover{
+	color:#fd7614;
+}
+
+.dropMenu ul ul
+{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	padding:0;
+}
+
+ul.levelone {
+	padding:40px 0 0 !important;
+}
+.dropMenu .levelone{
+	float:none;
+	width:180px; /*here's the width for the menu layer 1*/
+}
+
+.levelone ul{
+	width: 200%; /*here's the width for the menu layer 2*/    /*used to be 400px*/
+	overflow-y:scroll; /*makes menu layer 2 scrollable*/
+}
+
+.dropMenu ul ul a
+{
+	line-height:120%;
+	padding:10px 15px
+}
+
+.dropMenu ul ul ul {
+	background-color: rgba(255,255,255,0.95) !important;
+    top: 0;
+    left: 100%;
+    padding: 40px 0 0;
+	height:100vh;
+}
+
+.dropMenu ul li:hover > ul
+{
+	display:block
+}
+.dropMenu li.firstLevel{
+	padding:0;
+}
+
+.dropMenu li.firstLevelLast{
+	height:100vh;
+}
+
+/*			 NAV BAR STYLING 			*/
+
+.secondLevelLast li:first-child{
+	width:100%;
+	margin:0 auto;
+	opacity:1;
+	padding:0;
+}
+
+.box{
+	width:45%;
+	margin:0 auto 10px;
+}
+
+.img-box{
+	width:45%;
+	margin:0 auto;
+}
+
+.indent{
+	margin:2px 100px;
+	display:inline-block;
+	width:100%;
+}
+
+
+.indent-a{
+	margin:2px 0 2px 50px;
+	display:inline-block;
+	width:100%;
+}
+
+.container li:last-child h4{
+	margin:0 0 0 15px;
+}
+
+/*			HOME PAGE STYLING 			*/
+
+.home_page{
+	height:100vh;
+	width:100%;
+}
+
+.home{
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+.home li{
+	display:inline-block;
+	padding:0;
+	margin:auto 2%;
+}
+
+h3 .home_font{
+	display:block !important;
+}
+
+
+/*			 'WEB AND DESIGN' COLUMN FLOATS			*/
+.col_left{
+	float:left;
+	display:inline-block;
+	width:46%;
+	padding:50px 2% 10px;
+}
+
+.col_right{
+	float:right;
+	display:inline-block;
+	width:46%;
+	margin:0 auto;
+	padding:0 2%;
+	background-color:#FFF;
+	position:fixed;
+	height:100vh;
+	overflow:auto;
+}
+
+/*			'WEB' STYLED CONTENT CONTENT COLUMN			*/
+
+.container{
+	width:100%;
+	display:block;
+}
+
+.level1{
+	padding: 0 1% 2% 5%;
+}
+.level2{
+	padding: 1% 1% 2% 10%;
+}
+
+/*			GALLERY STYLING 			*/
+.gallery{
+	width:85%;
+	margin:0 auto; 
+}
+	
+.gallery a:hover{
+	opacity:0.6;
+}	
+
+/*			FOOTER			*/
+.footer{
+	margin:0 5px 10px 0;
+	bottom:0;
+	position:relative;
+	width:100%;
+	display:block;
+}
+.footer_home{
+	margin:0;
+	bottom:0;
+	width:99%;
+	display:block;
+	position:fixed;
+}
+.footer_home h3{
+	float:right;
+}
+.footer h3{
+	float:right;
+}
